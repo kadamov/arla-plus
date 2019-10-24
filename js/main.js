@@ -15,12 +15,6 @@ const firebaseConfig = {
 };
 // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
- // watch the database ref for changes
-movieRef.onSnapshot(function(snapshotData) {
-  movies = snapshotData.docs;
-  appendMovies(movies);
-});
 
 
 
