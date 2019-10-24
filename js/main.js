@@ -1,25 +1,27 @@
 "use strict";
 
-// user crud functionality
+// ========== Firebase sign in functionality ========== //
 
 // Your web app's Firebase configuration
-
-// Your web app's Firebase configuration
-var firebaseConfig = {
-apiKey: "AIzaSyAuFXEnggk49gbY4MDrt-XLSOD-CtTsxg8",
-authDomain: "learn-coding-24030.firebaseapp.com",
-databaseURL: "https://learn-coding-24030.firebaseio.com",
-projectId: "learn-coding-24030",
-storageBucket: "learn-coding-24030.appspot.com",
-messagingSenderId: "87373107923",
-appId: "1:87373107923:web:7fe83fa7700353c6423a26"
+const firebaseConfig = {
+  apiKey: "AIzaSyBKJFPsUFKA0rYxNChrcp6-kxff7WaSCVQ",
+  authDomain: "arla-676ac.firebaseapp.com",
+  databaseURL: "https://arla-676ac.firebaseio.com",
+  projectId: "arla-676ac",
+  storageBucket: "arla-676ac.appspot.com",
+  messagingSenderId: "133216447180",
+  appId: "1:133216447180:web:257071c58e52dc41fb7069",
+  measurementId: "G-02TMREPS40"
 };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-const userRef = db.collection("user");
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
 
-let selectedUserId = "";
+ const db = firebase.firestore();
+ const userRef = db.collection("user");
+ let movies = [];
+ let currentUser;
+
+
 
 
 // Firebase UI configuration
