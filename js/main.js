@@ -13,13 +13,14 @@ const firebaseConfig = {
   appId: "1:133216447180:web:257071c58e52dc41fb7069",
   measurementId: "G-02TMREPS40"
 };
- // Initialize Firebase
- firebase.initializeApp(firebaseConfig);
-
- const db = firebase.firestore();
- const userRef = db.collection("user");
- let movies = [];
- let currentUser;
+// Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+ // watch the database ref for changes
+movieRef.onSnapshot(function(snapshotData) {
+  movies = snapshotData.docs;
+  appendMovies(movies);
+});
 
 
 
