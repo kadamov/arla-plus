@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>Wetch Movie App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"
-  <meta name="description" content="Wetch Web App">
   <meta name="author" content="Jannick, Ian, Burhan">
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   <link rel="stylesheet" href="css/main.css">
@@ -75,11 +74,23 @@
   </section>
 
   <!-- profile page -->
-  <header class="topbar">
+  <section id="profile" class="page">
+    <header class="topbar">
       <h2>Profile</h2>
       <a class="right" href="#" onclick="logout()">Logout</a>
     </header>
-  <section id="profile" class="page">
+    <form>
+      <label>Profile Image</label>
+      <input type="file" id="img" accept="image/*" onchange="previewImage(this.files[0], 'imagePreview')">
+      <img id="imagePreview" class="image-preview" src="/img/pic-placeholder.png" alt="imagePreview">
+         <label for="name">Name</label>
+         <input type="text" id="name" placeholder="Type your name" required>
+         <label for="mail">Mail</label>
+         <input type="email" id="mail" placeholder="Type your mail" required>
+         <label for="birthdate">Birthdate</label>
+         <input type="text" id="birthdate" placeholder="Type your birthdate" required>
+         <button id="addMovieButton" type="button" name="button" onclick="updateUser()">Save</button>
+       </form>
   </section>
 
   <section id="login" class="page">
