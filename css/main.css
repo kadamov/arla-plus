@@ -36,6 +36,10 @@ h1 {
   width: 33%;
   padding: 0% 23%;
 }
+.logo-login{
+  width: 75%;
+  padding: 0% 12.5% 12.5% 12.5%;
+}
 .topbar {
   width: 100%;
   background-color: var(--green);
@@ -48,6 +52,18 @@ h1 {
   left: 0;
   right: 20px;
   z-index: 9999;
+}
+#socialdiv{
+padding-top: 200px;
+width: 100%;
+
+text-transform: uppercase;
+position: fixed;
+}
+#socialdiv i{
+color: green;
+padding-top: 5%;
+font-size: 70px;
 }
 
 .topbar h2 {
@@ -207,7 +223,7 @@ h1 {
 }
 .mdl-button--raised.mdl-button--colored{
   background: green;
-  border: 2px solid red;
+  border: 2px solid green;
 
   border-radius: 25px;
 }
