@@ -94,13 +94,14 @@ h1 {
 
 /* ---------- tabbar styling ---------- */
 .tabbar {
-  background-color: green;
+  background-color: red;
   ;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 9999;
+  width: 25%;
 }
 
 /* Style the links inside the navigation bar */
@@ -145,6 +146,9 @@ h1 {
   background-color: green;
   /* padding equals height of tabbar and topbar */
   padding: 55px 0;
+  width: 75%;
+padding-left: 25%;
+}
 }
 
 /* ---------- logo styling ---------- */
