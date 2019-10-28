@@ -56,7 +56,7 @@ h1 {
 #socialdiv{
 margin-top: 200px;
 width: 100%;
-
+  z-index: -1;
 text-transform: uppercase;
 position: fixed;
 }
@@ -64,6 +64,7 @@ position: fixed;
 color: green;
 padding-top: 15%;
 font-size: 70px;
+
 }
 
 .topbar h2 {
