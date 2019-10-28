@@ -19,6 +19,10 @@ html {
 }
 
 body {
+  background-image: url("../img/korn_top_image.png");
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-position: center;
   margin: 0;
 }
 
@@ -36,10 +40,9 @@ h1 {
   width: 33%;
   padding: 0% 23%;
 }
-.logo-login{
-  width: 75%;
-  padding: 0% 12.5% 12.5% 12.5%;
-}
+
+
+
 .topbar {
   width: 100%;
   background-color: var(--green);
@@ -52,18 +55,6 @@ h1 {
   left: 0;
   right: 20px;
   z-index: 9999;
-}
-#socialdiv{
-margin-top: 200px;
-width: 100%;
-
-text-transform: uppercase;
-position: fixed;
-}
-#socialdiv i{
-color: green;
-padding-top: 15%;
-font-size: 70px;
 }
 
 .topbar h2 {
@@ -90,10 +81,7 @@ font-size: 70px;
 
 /* ---------- tabbar styling ---------- */
 .tabbar {
-  background-image: url("../img/korn_top_image.png");
-  background-repeat: no-repeat;
-  background-size:  cover;
-  background-position: center;
+
   position: fixed;
   top: 15%;
   left: 0;
@@ -105,21 +93,29 @@ font-size: 70px;
 
 /* Style the links inside the navigation bar */
 .tabbar a {
+  width: 80%;
+  height: 30px;
 
   display:list-item;
-  color: var(--text-color-light);
+  color: black;
   text-align: center;
   padding: 20px 0px;
+margin-left: 40px;
+margin-top: 30px;
+border-radius: 40px;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  background-color: #ffffff;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 1.5em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  width: 100%;
+
 }
 
 /* Change the color of links on hover */
 .tabbar a:hover {
-  background-color: var(--light-grey);
+  background-color: black;
   color: var(--text-color-dark);
 }
 
@@ -223,7 +219,7 @@ font-size: 70px;
 }
 .mdl-button--raised.mdl-button--colored{
   background: green;
-  border: 2px solid green;
+  border: 2px solid red;
 
   border-radius: 25px;
 }

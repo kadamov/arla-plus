@@ -16,14 +16,7 @@
 </head>
 
 <body>
-  <!-- tabbar navigation Jannick-->
-  <nav id="tabbar" class="tabbar hide">
-    <a class="fa fa-fw fa-home" href="#home" onclick="showPage('home')">
-      <!-- <img src="/spa_firebase_login/img/man-icon.png">--></a>
-    <a href="#about" onclick="showPage('about')">Feed</a>
-    <a href="#clients" onclick="showPage('clients')">Friends</a>
-    <a class="fa fa-fw fa-user" href="#profile" onclick="showPage('profile')"></a>
-  </nav>
+
 
   <!-- pages -->
   <!-- home page -->
@@ -33,21 +26,20 @@
     <header class="topbar">
 
 
-        <a class="fa fa-fw fa-home active"> </a>
+        <a class="fa fa-fw fa-home active"></a>
         <img src="../img/arla-logo.png" alt="" class="logo">
         <a class="fa fa-fw fa-user active"> </a>
 
         <h2></h2>
-
     </header>
-
-
-    <p id="demo"></p>
-    <div id="content" class="grid-container"></div>
-    <div>
-
-
-  </div>
+    <!-- tabbar navigation Jannick-->
+    <nav id="tabbar" class="tabbar hide">
+      <a  id="menu-home" class="fa fa-fw fa-home" href="#home" onclick="showPage('home')">
+         Farm Table </a>
+      <a  id="menu-home" href="#about" onclick="showPage('about')">Feed</a>
+      <a  id="menu-home" href="#clients" onclick="showPage('clients')">Friends</a>
+      <a  id="menu-home" class="fa fa-fw fa-user" href="#profile" onclick="showPage('profile')"></a>
+    </nav>
 
 
       <!-- The core Firebase JS SDK is always required and must be listed first -->
