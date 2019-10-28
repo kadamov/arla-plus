@@ -91,6 +91,10 @@ h1 {
 .topbar a.right {
   right: 20px;
 }
+#flexmenu {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* ---------- tabbar styling ---------- */
 .tabbar {
