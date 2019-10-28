@@ -36,6 +36,12 @@
     <nav id="tabbar" class="tabbar hide">
       <a  id="menu-home" class="fa fa-fw fa-home" href="#home" onclick="showPage('home')">
          Farm Table </a>
+         <a  id="menu-home" class="fa fa-fw fa-home" href="#home" onclick="showPage('home')">
+            Farm Table </a>
+            <a  id="menu-home" class="fa fa-fw fa-home" href="#home" onclick="showPage('home')">
+               Farm Table </a>
+               <a  id="menu-home" class="fa fa-fw fa-home" href="#home" onclick="showPage('home')">
+                  Farm Table </a>
       <a  id="menu-home" href="#about" onclick="showPage('about')">Feed</a>
       <a  id="menu-home" href="#clients" onclick="showPage('clients')">Friends</a>
       <a  id="menu-home" class="fa fa-fw fa-user" href="#profile" onclick="showPage('profile')"></a>
@@ -52,7 +58,13 @@
   <!-- Feed -->
   <section id="about" class="page">
     <header class="topbar">
-      <h2>Feed</h2>
+
+
+        <a class="fa fa-fw fa-home active" href="#home" onclick="showPage('home')"></a>
+        <img src="../img/arla-logo.png" alt="" class="logo">
+        <a class="fa fa-fw fa-user active"> </a>
+
+        <h2>Feed</h2>
     </header>
   <div id="feedContent" class="grid-container"></div>
 
@@ -61,7 +73,13 @@
   <!-- Friend list -->
   <section id="clients" class="page">
     <header class="topbar">
-      <h2>Friends</h2>
+
+
+        <a class="fa fa-fw fa-home active" href="#home" onclick="showPage('home')"></a>
+        <img src="../img/arla-logo.png" alt="" class="logo">
+        <a class="fa fa-fw fa-user active"> </a>
+
+        <h2>Friends</h2>
     </header>
     <p>List of friends</p>
   </section>
@@ -69,9 +87,15 @@
   <!-- profile page -->
   <section id="profile" class="page">
     <header class="topbar">
-      <h2>Profile</h2>
-      <a class="right" href="#" onclick="logout()">Logout</a>
+
+
+        <a class="fa fa-fw fa-home active" href="#home" onclick="showPage('home')"></a>
+        <img src="../img/arla-logo.png" alt="" class="logo">
+
+        <h2>Profile</h2>
+        <a class="right" href="#" onclick="logout()">Logout</a>
     </header>
+
     <form>
       <label>Profile Image</label>
       <input type="file" id="img" accept="image/*" onchange="previewImage(this.files[0], 'imagePreview')">

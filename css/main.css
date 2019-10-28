@@ -19,10 +19,7 @@ html {
 }
 
 body {
-  background-image: url("../img/korn_top_image.png");
-  background-repeat: no-repeat;
-  background-size:  cover;
-  background-position: center;
+
   margin: 0;
 }
 
@@ -38,7 +35,7 @@ h1 {
 /* ---------- topbar styling ---------- */
 .logo{
   width: 33%;
-  padding: 0% 23%;
+  padding: 0% 22%;
 }
 
 
@@ -56,22 +53,6 @@ h1 {
   right: 20px;
   z-index: 9999;
 }
-<<<<<<< HEAD
-=======
-#socialdiv{
-margin-top: 200px;
-width: 100%;
-  z-index: -1;
-text-transform: uppercase;
-position: fixed;
-}
-#socialdiv i{
-color: green;
-padding-top: 15%;
-font-size: 70px;
-
-}
->>>>>>> 29d28daa355feb3983b18b8ab9c7d73e816967e6
 
 .topbar h2 {
   margin: 0;
@@ -84,6 +65,8 @@ font-size: 70px;
   color: var(--text-color-light);
   position: absolute;
   top: 20px;
+
+  font-size: 1.9em;
 }
 
 .topbar a.left {
@@ -97,7 +80,10 @@ font-size: 70px;
 
 /* ---------- tabbar styling ---------- */
 .tabbar {
-
+  background-image: url("../img/korn_top_image.png");
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-position: center;
   position: fixed;
   top: 15%;
   left: 0;
@@ -115,9 +101,9 @@ font-size: 70px;
   display:list-item;
   color: black;
   text-align: center;
-  padding: 20px 0px;
+  padding: 21.5px 0px;
 margin-left: 40px;
-margin-top: 30px;
+margin-top: 15px;
 border-radius: 40px;
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
@@ -138,14 +124,10 @@ border-radius: 40px;
 /* Add a color to the active/current link */
 .tabbar a.active {
   background-image: url("../img/black-texture-background.jpg");
-  color: var(--text-color-light);
+  color: green;
 }
 
-/*plusmoviebutton*/
-#newappear {
-  width: 25%;
-  margin: 5%;
-}
+
 
 /* ---------- page styling ---------- */
 .page {
