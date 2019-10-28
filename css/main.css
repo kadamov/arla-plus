@@ -23,33 +23,7 @@ body {
 }
 
 
-/*  burgermenu*/
-.container {
-  display: inline-block;
-  cursor: pointer;
-}
 
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 2px;
-  background-color: white;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {
-  opacity: 0;
-}
-
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
-}
 
 h1 {
   font-size: 2em;
@@ -58,16 +32,21 @@ h1 {
 }
 
 /* ---------- topbar styling ---------- */
+.logo{
+  width: 30%;
+  padding: 0% 30%;
+}
 .topbar {
-  background-color: var(--green);
+
+  background-color: red;
   color: var(--text-color-light);
   background-color: green;
-  padding: 13.5px;
+  padding: 2% 2%;
   text-transform: uppercase;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  right: 20px;
   z-index: 9999;
 }
 
@@ -91,10 +70,7 @@ h1 {
 .topbar a.right {
   right: 20px;
 }
-#flexmenu {
-  display: flex;
-  justify-content: space-between;
-}
+
 
 /* ---------- tabbar styling ---------- */
 .tabbar {
@@ -150,8 +126,6 @@ h1 {
   background-color: green;
   /* padding equals height of tabbar and topbar */
   padding: 55px 0;
-  width: 75%;
-padding-left: 25%;
 }
 }
 
