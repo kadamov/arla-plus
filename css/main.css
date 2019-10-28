@@ -175,7 +175,13 @@ border-radius: 40px;
 /* ---------- loader styling ---------- */
 
 
-
+#socialdiv{
+  width: 100%;
+position: relative;
+top: 20rem;
+color: green;
+  font-size: 3.5em;
+}
 
 .hide {
   visibility: hidden;
@@ -186,7 +192,7 @@ border-radius: 40px;
 /* ---------- authentication styling ---------- */
 #firebaseui-auth-container {
   position: absolute;
-  top: 50%;
+  top: 60%;
   width: 100%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -217,7 +223,7 @@ border-radius: 40px;
 }
 .mdl-button--raised.mdl-button--colored{
   background: green;
-  border: 2px solid red;
+  border: 2px solid green;
 
   border-radius: 25px;
 }
