@@ -105,7 +105,7 @@ h1 {
 
 /* Style the links inside the navigation bar */
 .tabbar a {
-  display: inline-block;
+  display:list-item;
   color: var(--text-color-light);
   text-align: center;
   padding: 20px 16px;
@@ -113,6 +113,7 @@ h1 {
   font-size: 0.8em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  width: 25%;
 }
 
 /* Change the color of links on hover */
