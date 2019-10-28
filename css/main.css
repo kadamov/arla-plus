@@ -124,7 +124,7 @@ h1 {
   background: var(--light-grey);
   animation: fadeIn 0.4s;
   background-image: url("../img/black-texture-background.jpg");
-  background-color: green;
+  background-color: white;
   /* padding equals height of tabbar and topbar */
   padding: 55px 0;
 }
@@ -202,6 +202,13 @@ h1 {
 .firebaseui-textfield.mdl-textfield .firebaseui-label::after {
   background-color: var(--green);
 }
+.mdl-button--raised.mdl-button--colored{
+  background: green;
+  border: 2px solid red;
+
+  border-radius: 25px;
+}
+
 
 form {
   background-color: #green;
