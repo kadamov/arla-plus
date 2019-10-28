@@ -38,7 +38,7 @@ h1 {
 }
 .topbar {
 
-  background-color: red;
+  background-color: var(--green);
   color: var(--text-color-light);
   background-color: green;
   padding: 2% 2%;
@@ -81,11 +81,12 @@ h1 {
   left: 0;
   right: 0;
   z-index: 9999;
-  width: 25%;
+  width: 35%;
 }
 
 /* Style the links inside the navigation bar */
 .tabbar a {
+
   display:list-item;
   color: var(--text-color-light);
   text-align: center;
