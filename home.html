@@ -38,7 +38,7 @@
 
         <a  href="#profile" onclick="showPage('profile')"><img src="../img/profile.png" alt="" class="profile-icon"> Profile</a>
 
-      <a  href="#home" onclick="showPage('home')"><img src="../img/table.png" alt="" class="table-icon">  Farm Table </a>
+      <a  href="#farm-table" onclick="showPage('farm-table')"><img src="../img/table.png" alt="" class="table-icon">  Farm Table </a>
          <a href="#add-data" onclick="showPage('add-data')"><img src="../img/add-data.png" alt="" class="data-icon">  Add Data </a>
             <a href="#forum-page" onclick="showPage('forum-page')"><img src="../img/forum-icon.png" alt="" class="forum-icon">  Forum </a>
                <a href="#tips-tricks" onclick="showPage('tips-tricks')"><img src="../img/tips-tricks.png" alt="" class="tipstricks">  Tips and Tricks </a>
@@ -55,6 +55,20 @@
       <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
 
   </section>
+  <!-- Farm table page -->
+  <section id="farm-table" class="page">
+    <header class="topbar">
+        <a class="fa fa-fw fa-home active" href="#home" onclick="showPage('home')"></a>
+        <img src="../img/arla-logo.png" alt="" class="logo">
+        <a class="fa fa-fw fa-user active"> </a>
+        <h2>Farm Table</h2>
+    </header>
+  <div id="feedContent" class="grid-container">
+
+    
+  </div>
+
+  </section>
 
   <!-- Add Data page -->
   <section id="add-data" class="page">
@@ -65,7 +79,7 @@
         <img src="../img/arla-logo.png" alt="" class="logo">
         <a class="fa fa-fw fa-user active"> </a>
 
-        <h2>Feed</h2>
+        <h2>Add Data</h2>
     </header>
   <div id="feedContent" class="grid-container"></div>
 
@@ -80,7 +94,7 @@
         <img src="../img/arla-logo.png" alt="" class="logo">
         <a class="fa fa-fw fa-user active"> </a>
 
-        <h2>Feed</h2>
+        <h2>Forum</h2>
     </header>
   <div id="feedContent" class="grid-container"></div>
 
@@ -95,7 +109,7 @@
         <img src="../img/arla-logo.png" alt="" class="logo">
         <a class="fa fa-fw fa-user active"> </a>
 
-        <h2>Feed</h2>
+        <h2>Tips and Tricks</h2>
     </header>
   <div id="feedContent" class="grid-container"></div>
 
@@ -110,7 +124,7 @@
         <img src="../img/arla-logo.png" alt="" class="logo">
         <a class="fa fa-fw fa-user active"> </a>
 
-        <h2>Feed</h2>
+        <h2>About Arla</h2>
     </header>
   <div id="feedContent" class="grid-container"></div>
 
@@ -125,7 +139,7 @@
         <img src="../img/arla-logo.png" alt="" class="logo">
         <a class="fa fa-fw fa-user active"> </a>
 
-        <h2>Friends</h2>
+        <h2>Settings</h2>
     </header>
     <p>List of friends</p>
   </section>
