@@ -56,6 +56,22 @@ h1 {
   right: 20px;
   z-index: 9999;
 }
+<<<<<<< HEAD
+=======
+#socialdiv{
+margin-top: 200px;
+width: 100%;
+  z-index: -1;
+text-transform: uppercase;
+position: fixed;
+}
+#socialdiv i{
+color: green;
+padding-top: 15%;
+font-size: 70px;
+
+}
+>>>>>>> 29d28daa355feb3983b18b8ab9c7d73e816967e6
 
 .topbar h2 {
   margin: 0;
