@@ -63,7 +63,7 @@
   <!-- Farm table page -->
   <section id="farm-table" class="page">
     <header class="topbar-home">
-        
+
         <a class="fa fa-fw fa-home active" href="#home" onclick="showPage('home')"></a>
         <img src="img/arla-logo.png" alt="" class="logo-home">
         <a class="fa fa-fw fa-user active" href="#profile" onclick="showPage('profile')"> </a>
@@ -129,22 +129,60 @@
   <section id="add-data" class="page">
     <header class="topbar-home">
 
-
-        
         <a class="fa fa-fw fa-home active" href="#home" onclick="showPage('home')"></a>
         <img src="img/arla-logo.png" alt="" class="logo-home">
         <a class="fa fa-fw fa-user active" href="#profile" onclick="showPage('profile')"> </a>
 
         <h2>Add Data</h2>
     </header>
-  <div id="feedContent" class="grid-container"></div>
+
+    <br> </br>
+    <div class="datacont">
+        <canvas id="chart"></canvas>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+            <!-- google sheet https://docs.google.com/spreadsheets/d/1XLv0wNtKVsBbKHPiGx1PLlbzc3RcxHmEPS6lmTvUwLA/edit#gid=0 -->
+            <button>35% data added</button>
+
+
+            <svg id="svg" viewbox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="#4bb131"/>
+              <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#fff"
+                    stroke-dasharray="1,250.2"
+                    d="M50 10
+                       a 40 40 0 0 1 0 80
+                       a 40 40 0 0 1 0 -80"/>
+              <text x="50" y="50" text-anchor="middle" dy="7" font-size="15">Cows</text>
+            </svg>
+            <svg viewbox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="#4bb131"/>
+              <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#fff"
+                    stroke-dasharray="125.6,125.6"
+                    d="M50 10
+                       a 40 40 0 0 1 0 80
+                       a 40 40 0 0 1 0 -80"/>
+              <text x="50" y="50" text-anchor="middle" dy="7" font-size="15">Fields</text>
+            </svg>
+            <svg viewbox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="#4bb131"/>
+              <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#fff"
+                    stroke-dasharray="251.2,0"
+                    d="M50 10
+                       a 40 40 0 0 1 0 80
+                       a 40 40 0 0 1 0 -80"/>
+
+              <text x="50" y="50" text-anchor="middle" dy="7" font-size="15">Energy</text>
+            </svg>
+
+      <button onclick="window.location.href = 'https://farmers.arla.com/s/login/?language=da';">Continue - Add more data</button>
+</div>
+
 
   </section>
 <!-- Forum page -->
   <section id="forum-page" class="page">
 
     <header class="topbar-home">
-        
+
         <a class="fa fa-fw fa-home active" href="#home" onclick="showPage('home')"></a>
         <img src="img/arla-logo.png" alt="" class="logo-home">
         <a class="fa fa-fw fa-user active" href="#profile" onclick="showPage('profile')"> </a>
@@ -902,7 +940,7 @@
   </div>
 </div><!-- End // .directional_nav -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  
+
 
   </section>
 
@@ -911,7 +949,7 @@
     <header class="topbar-home">
 
 
-       
+
         <a class="fa fa-fw fa-home active" href="#home" onclick="showPage('home')"></a>
         <img src="img/arla-logo.png" alt="" class="logo-home">
         <a class="fa fa-fw fa-user active" href="#profile" onclick="showPage('profile')"> </a>
@@ -920,18 +958,18 @@
     </header>
   <div class="container">
   <img src="img/arlaintro.png" alt="arlaintro" style="width:100%;">
-  
+
   <div class="centered"></div>
 </div>
-	  
+
 	   <div class="container2">
   <img src="img/grid1.png" alt="arlaintro" style="width:100%;">
-  
+
   <div class="centered"></div>
 </div>
 	     <div class="container3">
   <img src="img/grid 2.png"	 alt="arlaintro" style="width:100%;">
-  
+
   <div class="centered"></div>
 </div>
 
@@ -942,14 +980,14 @@
     <header class="topbar-home">
 
 
-       
+
         <a class="fa fa-fw fa-home active" href="#home" onclick="showPage('home')"></a>
         <img src="img/arla-logo.png" alt="" class="logo-home">
         <a class="fa fa-fw fa-user active" href="#profile" onclick="showPage('profile')"> </a>
 
         <h2>Settings</h2>
     </header>
-    
+
 	  <div class="grid-container">
   <div class="grid-item"><img src="img/profile.png" alt="profile">
 		  <a href="#" >Profile</a>
@@ -959,7 +997,7 @@
 		  </div>
   <div class="grid-item"><img src="img/Path 1.png" alt="notifications">
 	  <a href="#" >Notifications</a>
-	  </div>  
+	  </div>
   <div class="grid-item"><img src="img/Path 49.png" alt="Privacy">
 		  <a href="#" >Privacy</a>
 		  </div>
@@ -968,10 +1006,10 @@
 		  </div>
   <div class="grid-item"><img src="img/Help.png" alt="questions">
 		  <a href="#" >Questions</a>
-		  </div>  
-    
+		  </div>
+
 </div>
-	  
+
   </section>
 
   <!-- Profile page -->
