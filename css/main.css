@@ -56,12 +56,11 @@ h1 {
   right: 20px;
   z-index: 9999;
 }
-<<<<<<< HEAD
-=======
+
+
 #socialdiv{
 margin-top: 200px;
 width: 100%;
-  z-index: -1;
 text-transform: uppercase;
 position: fixed;
 }
@@ -70,8 +69,9 @@ color: green;
 padding-top: 15%;
 font-size: 70px;
 
+
 }
->>>>>>> 29d28daa355feb3983b18b8ab9c7d73e816967e6
+
 
 .topbar h2 {
   margin: 0;
@@ -235,7 +235,7 @@ border-radius: 40px;
 }
 .mdl-button--raised.mdl-button--colored{
   background: green;
-  border: 2px solid red;
+  border: 2px solid green;
 
   border-radius: 25px;
 }
