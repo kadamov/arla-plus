@@ -2228,13 +2228,12 @@ text{
 
 
 header video {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
   z-index: 0;
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
@@ -2248,7 +2247,7 @@ header .container {
 }
 
 header .overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   height: 100%;
@@ -2266,7 +2265,147 @@ header .overlay {
 
 /*PC media*/
 @media (min-width: 992px) {
+	.topbar-home{
+		display: none;
+	}
+	.tabbar{ display: none;}
+
   .grid-container {
     grid-template-columns: 33.33% 33.33% 33.33%;
   }
+	/* ---------- logo-home styling ---------- */
+.logo-login {
+  margin: 2em auto;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  z-index: 999;
+}
+	#socialdiv{
+  width: 100%;
+position: relative;
+top: 25rem;
+color: green;
+  font-size: 3.5em;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+
+/* ---------- authentication styling ---------- */
+#firebaseui-auth-container {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.firebaseui-container {
+  font-family: var(--font-family);
+  font: 16px var(--font-family);
+}
+
+.firebaseui-title {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mdl-button--raised.mdl-button--colored,
+.mdl-button--raised.mdl-button--colored:active,
+.mdl-button--raised.mdl-button--colored:hover {
+
+  color: #fff;
+  border-radius: 0;
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
+  background-color: var(--green);
+}
+.mdl-button--raised.mdl-button--colored{
+  background: green;
+  border: 2px solid green;
+
+  border-radius: 25px;
+}
+
+
+form {
+  background-color: white;
+  padding: 2em 1em 2.5em;
+}
+
+form button {
+  font-weight: 200;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 12px 15px;
+  font-size: 1em;
+  border-radius: 0;
+  color: black;
+  background-color: white;
+  width: 100%;
+  max-width: 350px;
+
+}
+
+article button {
+  font-weight: 200;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 10px 8px;
+  border-radius: 0;
+  color: White;
+  background-color: #e8aa26;
+  width: 40%;
+}
+
+select {
+  font-weight: 200;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 10px 8px;
+  border-radius: 0;
+  color: White;
+  background-color: #e8aa26;
+  width: 40%;
+}
+button {
+  font-weight: 200;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 10px 8px;
+  border-radius: 0;
+  color: White;
+  background-color: green;
+  width:100%;
+  border: 2px solid green;
+  padding: 10px;
+  border-radius: 25px;
+}
+#flexsort{
+  margin: 5%;
+
+
+}
+input {
+  margin: 1em auto;
+  width: 100%;
+  max-width: 350px;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  display: block;
+  background-color: White;
+}
+	
+	
 }
