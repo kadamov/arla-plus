@@ -63,7 +63,7 @@ h1 {
 
 .topbar-home {
   width: 100%;
-  background-color: var(--green);
+  
   color: var(--text-color-light);
   background-color: green;
   padding: 2% 0%;
@@ -195,7 +195,7 @@ float: left;
   
   background-color: white;
   /* padding equals height of tabbar and topbar-home */
-  padding: 55px 0;
+  
 }
 
 
@@ -592,13 +592,13 @@ p .wetch {
 
 /*Contact page*/
 #container {
-  width: 75%;
+  width: 80%;
   height: 568px;
   background: #fff;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-top: -224px;
+  margin-top: -154px;
   margin-left: -160px;
   overflow: hidden;
 }
@@ -788,7 +788,7 @@ p .wetch {
   padding: 10px 0 0 10px;
   position: relative;
   left: -10px;
-  top: 155px;
+  top: 110px;
 }
 .app-wrapp .app-container {
   width: 100%;
