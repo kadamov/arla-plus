@@ -2264,6 +2264,9 @@ display: none;
 .sidenav{
 	display: none;
 }
+.home-viewpc{
+	display: none;
+}
 
 @media (min-width: 600px) {
   .grid-container {
@@ -2278,6 +2281,17 @@ display: none;
 	}
 	.tabbar{ display: none;}
 
+	.home-viewpc{
+	color: green;
+		font-weight: 900;
+		font-style: bold;
+		text-transform: uppercase;
+  letter-spacing: 2px;
+		display: block;
+		position: relative;
+		top: 200px;
+		left: 150px;
+}
 	
 	/* ---------- page styling ---------- */
 .page {
@@ -2286,7 +2300,7 @@ display: none;
   min-height: calc(100vh - 0px);
   background: var(--light-grey);
   animation: fadeIn 0.4s;
-  background-color: red;
+  background-color: white;
   /* padding equals height of tabbar and topbar-home */
 
 }
