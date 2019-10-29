@@ -38,6 +38,7 @@ html {
 }
 
 body {
+	
   width: 100%;
   height: 100vh;
   margin: 0;
@@ -73,7 +74,7 @@ h1 {
   right: 20px;
   z-index: 9999;
 }
-<<<<<<< HEAD
+
 
 
 #socialdiv{
@@ -90,8 +91,6 @@ font-size: 70px;
 
 }
 
-=======
->>>>>>> e82d48193aaa9fc87ab342664fe92ffc07e615d6
 
 .topbar-home h2 {
   margin: 0;
@@ -122,21 +121,22 @@ font-size: 70px;
   background-image: url("../img/korn_top_image.png");
   background-repeat: no-repeat;
   background-size:  cover;
-  background-position: center;
-  position: fixed;
-  top: 15%;
+	background-position: center;
+	margin: 6vh auto;
+  position: relative;
+  top: 0%;
   left: 0;
   right: 0;
-  z-index: 9999;
   width: 100%;
-  height: 120%;
+  min-height: 800px;
 }
 
 /* Style the links inside the navigation bar */
 .tabbar a {
   width: 80%;
   height: 30px;
-
+	position: relative;
+	top: 10vh;
   display:list-item;
   color: green;
   text-align: center;
@@ -162,7 +162,7 @@ border-radius: 40px;
 
 /* Add a color to the active/current link */
 .tabbar a.active {
-  background-image: url("../img/black-texture-background.jpg");
+  
 
 }
 
@@ -181,7 +181,7 @@ float: left;
   left: 1.2rem;
   float: left;
   }
-}
+
 
 
 
@@ -192,12 +192,12 @@ float: left;
   min-height: calc(100vh - 110px);
   background: var(--light-grey);
   animation: fadeIn 0.4s;
-  background-image: url("../img/black-texture-background.jpg");
+  
   background-color: white;
   /* padding equals height of tabbar and topbar-home */
   padding: 55px 0;
 }
-}
+
 
 /* ---------- logo-home styling ---------- */
 .logo-login {
@@ -269,7 +269,7 @@ color: green;
 .mdl-button--raised.mdl-button--colored,
 .mdl-button--raised.mdl-button--colored:active,
 .mdl-button--raised.mdl-button--colored:hover {
-  background-image: url("../img/black-texture-background.jpg");
+  
   color: #fff;
   border-radius: 0;
 }
@@ -286,7 +286,7 @@ color: green;
 
 
 form {
-  background-color: #green;
+  background-color: white;
   padding: 2em 1em 2.5em;
 }
 
