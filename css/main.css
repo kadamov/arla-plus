@@ -204,6 +204,8 @@ float: left;
   margin: 2em auto;
   width: 100%;
   max-width: 300px;
+  position: relative;
+  z-index: 999;
 }
 
 /* ---------- animations ---------- */
@@ -234,7 +236,7 @@ float: left;
 #socialdiv{
   width: 100%;
 position: relative;
-top: 20rem;
+top: 30rem;
 color: green;
   font-size: 3.5em;
 }
@@ -2277,5 +2279,5 @@ header .overlay {
   header {
     background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
   }
-  
+
 }
