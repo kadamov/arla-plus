@@ -2257,6 +2257,14 @@ header .overlay {
   z-index: 1;
 }
 
+
+.main{
+display: none;
+}
+.sidenav{
+	display: none;
+}
+
 @media (min-width: 600px) {
   .grid-container {
     grid-template-columns: 50% 50%;
@@ -2269,6 +2277,45 @@ header .overlay {
 		display: none;
 	}
 	.tabbar{ display: none;}
+	
+	
+	
+.main {
+	display: block;
+	
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+	.main p, h2{
+	color: black
+}
+	.sidenav {
+		display: block;
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+	
 
   .grid-container {
     grid-template-columns: 33.33% 33.33% 33.33%;
