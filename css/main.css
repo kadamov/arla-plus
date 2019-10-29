@@ -383,17 +383,7 @@ input {
   transform: rotate(360deg);
 }
 
-@media (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: 50% 50%;
-  }
-}
 
-@media (min-width: 992px) {
-  .grid-container {
-    grid-template-columns: 33.33% 33.33% 33.33%;
-  }
-}
 
 .grid-container>article {
   text-align: center;
@@ -2266,4 +2256,17 @@ header .overlay {
   background-color: black;
   opacity: 0.5;
   z-index: 1;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+/*PC media*/
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
 }
