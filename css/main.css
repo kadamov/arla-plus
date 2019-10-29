@@ -2277,6 +2277,7 @@ display: none;
 		display: none;
 	}
 	.tabbar{ display: none;}
+<<<<<<< HEAD
 	
 	/* ---------- page styling ---------- */
 .page {
@@ -2294,6 +2295,21 @@ display: none;
 	
 	
 
+=======
+
+
+
+.main {
+	display: block;
+
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+	.main p, h2{
+	color: black
+}
+>>>>>>> 54b0eaf86138a77a87f4daf0a954cca0393ce3ca
 	.sidenav {
 		display: block;
   height: 100%;
@@ -2349,7 +2365,12 @@ float: left;
 .sidenav a.active {
 color: green;
 }
+<<<<<<< HEAD
 	
+=======
+
+
+>>>>>>> 54b0eaf86138a77a87f4daf0a954cca0393ce3ca
 
   .grid-container {
     grid-template-columns: 33.33% 33.33% 33.33%;
@@ -2487,6 +2508,6 @@ input {
   display: block;
   background-color: White;
 }
-	
-	
+
+
 }
