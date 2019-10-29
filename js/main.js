@@ -421,6 +421,7 @@ function appendChart(data) {
     }
   });
 }
+// Progress Circles
 var count = $(('#count'));
 $({ Counter: 0 }).animate({ Counter: count.text() }, {
   duration: 5000,

@@ -2277,12 +2277,12 @@ display: none;
 		display: none;
 	}
 	.tabbar{ display: none;}
-	
-	
-	
+
+
+
 .main {
 	display: block;
-	
+
   margin-left: 160px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
@@ -2315,7 +2315,7 @@ display: none;
   color: #f1f1f1;
 }
 
-	
+
 
   .grid-container {
     grid-template-columns: 33.33% 33.33% 33.33%;
@@ -2453,6 +2453,6 @@ input {
   display: block;
   background-color: White;
 }
-	
-	
+
+
 }
