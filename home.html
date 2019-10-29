@@ -11,7 +11,7 @@
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -148,7 +148,10 @@
 
         <h2>Forum</h2>
     </header>
-  <div id="feedContent" class="grid-container"></div>
+  <div id="feedContent" class="grid-container">
+
+
+  </div>
 
   </section>
 
@@ -207,19 +210,623 @@
         <h2>Profile</h2>
         <a class="right" href="#" onclick="logout()">Logout</a>
     </header>
+    <div class="app-wrapp">
+    <div class="app-container">
+    <!-- @main page view -->
+    <div class="view-main">
+        <div class="header-wrapp">
+            <div class="app-detail">
+                <div>
+                    <img src="data:image/jpeg;base64,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" alt="">
+                </div>
+                <div>Yousef Sami</div>
+                <div class="status">online</div>
+            </div>
+            <div class="wave-wrapp">
+                <svg class="wave" xmlns="http://www.w3.org/2000/svg"  viewBox="0 24 150 28"   preserveAspectRatio="none">
+                    <defs>
+                        <path id="gentle-wave" d="m -160,44.4 c 30,0 58,-18 87.7,-18 30.3,0 58.3,18 87.3,18 30,0 58,-18 88,-18 30,0 58,18 88,18 l 0,34.5 -351,0 z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="50" y="0" fill="rgba(255, 255, 255, 0.48)"/>
+                        <use xlink:href="#gentle-wave" x="50" y="3" fill="rgba(255, 255, 255, 0.78)"/>
+                        <use xlink:href="#gentle-wave" x="50" y="6" fill="rgba(255, 255, 255, 0.8)"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="content-wrapp">
+            <div class="nav-group">
+                <nav id="master-nav">
+                    <ul>
+                        <li><i class="material-icons">perm_identity</i></li>
+                        <li class="active"><i class="material-icons">chat_bubble_outline</i></li>
+                        <li><i class="material-icons">favorite_border</i></li>
+                        <li><i class="material-icons">tune</i></li>
+                        <li id="active-line"></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="master-nav-items" data-viewport="true">
+                <div id="item-1">
+                    <div class="alphabet">
+                        <div>A</div>
+                        <div>D</div>
+                        <div>F</div>
+                        <div>I</div>
+                        <div>K</div>
+                        <div>N</div>
+                        <div>P</div>
+                        <div>S</div>
+                        <div>U</div>
+                        <div>X</div>
+                        <div>Z</div>
+                        <div>#</div>
+                    </div>
+                    <div class="contact-list">
+                        <ul class="touch-y">
+                            <li id="a" class=""><a name="a" class="title">A</a>
+                                <ul>
+                                    <li>Adam</li>
+                                    <li>Alex</li>
+                                    <li>Ali</li>
+                                    <li>Apple</li>
+                                    <li>Arthur</li>
 
-    <form>
-      <label>Profile Image</label>
-      <input type="file" id="img" accept="image/*" onchange="previewImage(this.files[0], 'imagePreview')">
-      <img id="imagePreview" class="image-preview" src="/img/pic-placeholder.png" alt="imagePreview">
-         <label for="name">Name</label>
-         <input type="text" id="name" placeholder="Type your name" required>
-         <label for="mail">Mail</label>
-         <input type="email" id="mail" placeholder="Type your mail" required>
-         <label for="birthdate">Birthdate</label>
-         <input type="text" id="birthdate" placeholder="Type your birthdate" required>
-         <button id="addMovieButton" type="button" name="button" onclick="updateUser()">Save</button>
-       </form>
+                                </ul>
+                            </li>
+                            <li id="b" class=""><a name="b" class="title">B</a>
+                                <ul>
+                                    <li>Barry</li>
+                                    <li>Becky</li>
+                                    <li>Biff</li>
+
+
+
+                                </ul>
+                            </li>
+                            <li id="c" class=""><a name="c" class="title">c</a>
+                                <ul>
+                                    <li>Calista</li>
+                                    <li>Cathy</li>
+                                    <li>Chris</li>
+                                    <li>Cinderella</li>
+                                    <li>Corky</li>
+                                    <li>Cypher</li>
+                                </ul>
+                            </li>
+                            <li id="d" class=""><a name="d" class="title">d</a>
+                                <ul>
+                                    <li>damien</li>
+
+                                    <li>denver</li>
+                                    <li>devon</li>
+                                    <li>doug</li>
+                                    <li>dustin</li>
+                                </ul>
+                            </li>
+                            <li id="e" class=""><a name="e" class="title">E</a>
+                                <ul>
+                                    <li>Barry</li>
+                                    <li>Becky</li>
+                                    <li>Biff</li>
+                                    <li>Billy</li>
+                                    <li>Bozarking</li>
+                                    <li>Bryan</li>
+                                </ul>
+                            </li>
+                            <li id="f" class=""><a name="f" class="title">f</a>
+                                <ul>
+                                    <li>Calista</li>
+                                    <li>Cathy</li>
+                                    <li>Chris</li>
+                                    <li>Cinderella</li>
+                                    <li>Corky</li>
+                                    <li>Cypher</li>
+                                </ul>
+                            </li>
+                            <li id="g" class=""><a name="g" class="title">g</a>
+                                <ul>
+                                    <li>damien</li>
+                                    <li>danny</li>
+
+
+
+
+                                </ul>
+                            </li>
+                            <li id="h" class=""><a name="h" class="title">h</a>
+                                <ul>
+                                    <li>Barry</li>
+                                    <li>Becky</li>
+                                    <li>Biff</li>
+                                    <li>Billy</li>
+                                    <li>Bozarking</li>
+                                    <li>Bryan</li>
+                                </ul>
+                            </li>
+                            <li id="i" class=""><a name="i" class="title">i</a>
+                                <ul>
+                                    <li>Calista</li>
+                                    <li>Cathy</li>
+                                    <li>Chris</li>
+                                    <li>Cinderella</li>
+                                    <li>Corky</li>
+                                    <li>Cypher</li>
+                                </ul>
+                            </li>
+                            <li id="j" class=""><a name="j" class="title">j</a>
+                                <ul>
+                                    <li>damien</li>
+                                    <li>danny</li>
+                                    <li>denver</li>
+                                    <li>devon</li>
+                                    <li>doug</li>
+                                    <li>dustin</li>
+                                </ul>
+                            </li>
+                            <li id="s" class=""><a name="s" class="title">s</a>
+                                <ul>
+                                    <li>Barry</li>
+                                    <li>Becky</li>
+                                    <li>Biff</li>
+                                    <li>Billy</li>
+                                    <li>Bozarking</li>
+                                    <li>Bryan</li>
+                                </ul>
+                            </li>
+                            <li id="t" class=""><a name="t" class="title">t</a>
+                                <ul>
+                                    <li>Calista</li>
+
+
+                                    <li>Cinderella</li>
+                                    <li>Corky</li>
+                                    <li>Cypher</li>
+                                </ul>
+                            </li>
+                            <li id="u" class=""><a name="u" class="title">u</a>
+                                <ul>
+                                    <li>damien</li>
+                                    <li>danny</li>
+                                    <li>denver</li>
+                                    <li>devon</li>
+                                    <li>doug</li>
+                                    <li>dustin</li>
+                                </ul>
+                            </li>
+                            <li id="v" class=""><a name="v" class="title">v</a>
+                                <ul>
+                                    <li>Barry</li>
+                                    <li>Becky</li>
+                                    <li>Biff</li>
+                                    <li>Billy</li>
+                                    <li>Bozarking</li>
+                                    <li>Bryan</li>
+                                </ul>
+                            </li>
+                            <li id="w" class=""><a name="w" class="title">w</a>
+                                <ul>
+                                    <li>Calista</li>
+                                    <li>Cathy</li>
+                                    <li>Chris</li>
+                                    <li>Cinderella</li>
+                                    <li>Corky</li>
+                                    <li>Cypher</li>
+                                </ul>
+                            </li>
+                            <li id="x" class=""><a name="x" class="title">x</a>
+                                <ul>
+                                    <li>damien</li>
+                                    <li>danny</li>
+                                    <li>denver</li>
+                                    <li>devon</li>
+                                    <li>doug</li>
+                                    <li>dustin</li>
+                                </ul>
+                            </li>
+                            <li id="y" class=""><a name="y" class="title">y</a>
+                                <ul>
+                                    <li>damien</li>
+                                    <li>danny</li>
+                                    <li>denver</li>
+                                    <li>devon</li>
+                                    <li>doug</li>
+                                    <li>dustin</li>
+                                </ul>
+                            </li>
+                            <li id="z" class=""><a name="z" class="title">z</a>
+                                <ul>
+                                    <li>damien</li>
+                                    <li>danny</li>
+                                    <li>denver</li>
+                                    <li>devon</li>
+                                    <li>doug</li>
+                                    <li>dustin</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="item-2">
+                    <div class="messages-list">
+                        <ul class="touch-y">
+                            <li>
+                                <div class="sender-image">
+                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg">
+                                </div>
+                                <div class="mes-detail">
+                                    <div class="mes-col1">
+                                        <div class="sender-name">
+                                            Masome Sami
+                                        </div>
+                                        <div class="mes-preview">
+                                            Hi how are you ?
+                                            <br>
+                                            What's your name?
+                                        </div>
+                                    </div>
+                                    <div class="mes-col2">
+                                        <div>
+                                            <div class="send-time">10:26 AM</div>
+                                            <div class="mes-seen-status"><i class="material-icons">done_all</i></div>
+                                        </div>
+                                        <span class="mes-count">3</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sender-image">
+                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kerem/128.jpg">
+                                </div>
+                                <div class="mes-detail">
+                                    <div class="mes-col1">
+                                        <div class="sender-name">
+                                            Reza Sami
+                                        </div>
+                                        <div class="mes-preview">
+                                            Where are you from ...
+                                        </div>
+                                    </div>
+                                    <div class="mes-col2">
+                                        <div>
+                                            <div class="send-time">9:00 AM</div>
+                                            <div class="mes-seen-status"><i class="material-icons">done_all</i></div>
+                                        </div>
+                                        <span class="mes-count">12</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sender-image">
+                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg">
+                                </div>
+                                <div class="mes-detail">
+                                    <div class="mes-col1">
+                                        <div class="sender-name">
+                                            یوسف سامی
+                                        </div>
+                                        <div class="mes-preview">
+                                            Lorem ipsum a plane text
+                                        </div>
+                                    </div>
+                                    <div class="mes-col2">
+                                        <div>
+                                            <div class="send-time">Tue</div>
+                                            <div class="mes-seen-status"></div>
+                                        </div>
+                                        <span class="mes-count">50</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sender-image">
+                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/zeldman/128.jpg">
+                                </div>
+                                <div class="mes-detail">
+                                    <div class="mes-col1">
+                                        <div class="sender-name">
+                                            +98912123456
+                                        </div>
+                                        <div class="mes-preview">
+                                            Hey i'm here
+                                        </div>
+                                    </div>
+                                    <div class="mes-col2">
+                                        <div>
+                                            <div class="send-time">Sun</div>
+                                            <!--<div class="mes-seen-status"><i class="material-icons">done_all</i></div>-->
+                                        </div>
+                                        <!--<span class="mes-count">3</span>-->
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sender-image">
+                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg">
+                                </div>
+                                <div class="mes-detail">
+                                    <div class="mes-col1">
+                                        <div class="sender-name">
+                                            Masome Sami
+                                        </div>
+                                        <div class="mes-preview">
+                                            Hi how are you ?
+                                            <br>
+                                            What's your name?
+                                        </div>
+                                    </div>
+                                    <div class="mes-col2">
+                                        <div>
+                                            <div class="send-time">10:26 AM</div>
+                                            <div class="mes-seen-status"><i class="material-icons">done_all</i></div>
+                                        </div>
+                                        <span class="mes-count">3</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sender-image">
+                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kerem/128.jpg">
+                                </div>
+                                <div class="mes-detail">
+                                    <div class="mes-col1">
+                                        <div class="sender-name">
+                                            Reza Sami
+                                        </div>
+                                        <div class="mes-preview">
+                                            Where are you from ...
+                                        </div>
+                                    </div>
+                                    <div class="mes-col2">
+                                        <div>
+                                            <div class="send-time">9:00 AM</div>
+                                            <div class="mes-seen-status"><i class="material-icons">done_all</i></div>
+                                        </div>
+                                        <span class="mes-count">12</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sender-image">
+                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg">
+                                </div>
+                                <div class="mes-detail">
+                                    <div class="mes-col1">
+                                        <div class="sender-name">
+                                            یوسف سامی
+                                        </div>
+                                        <div class="mes-preview">
+                                            Lorem ipsum a plane text
+                                        </div>
+                                    </div>
+                                    <div class="mes-col2">
+                                        <div>
+                                            <div class="send-time">Tue</div>
+                                            <div class="mes-seen-status"></div>
+                                        </div>
+                                        <span class="mes-count">50</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sender-image">
+                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/zeldman/128.jpg">
+                                </div>
+                                <div class="mes-detail">
+                                    <div class="mes-col1">
+                                        <div class="sender-name">
+                                            +98912123456
+                                        </div>
+                                        <div class="mes-preview">
+                                            Hey i'm here
+                                        </div>
+                                    </div>
+                                    <div class="mes-col2">
+                                        <div>
+                                            <div class="send-time">Sun</div>
+                                            <!--<div class="mes-seen-status"><i class="material-icons">done_all</i></div>-->
+                                        </div>
+                                        <!--<span class="mes-count">3</span>-->
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sender-image">
+                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/nzcode/128.jpg">
+                                </div>
+                                <div class="mes-detail">
+                                    <div class="mes-col1">
+                                        <div class="sender-name">
+                                            Masome Sami
+                                        </div>
+                                        <div class="mes-preview">
+                                            Hi how are you ?
+                                            <br>
+                                            What's your name?
+                                        </div>
+                                    </div>
+                                    <div class="mes-col2">
+                                        <div>
+                                            <div class="send-time">10:26 AM</div>
+                                            <div class="mes-seen-status"><i class="material-icons">done_all</i></div>
+                                        </div>
+                                        <span class="mes-count">3</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="item-3">
+                    <div class="touch-y activity">
+                        <i class="material-icons">sentiment_dissatisfied</i>
+                        <h1>Sorry !</h1>
+                        <p>You don't have any Activity</p>
+                    </div>
+                </div>
+                <div id="item-4">
+                    <div class="profile-setting">
+                        <div class="touch-y">
+                            <div class="information">
+                                <div class="public">
+                                    <p>
+                                        PUBLIC INFORMATION
+                                    </p>
+                                    <div class="form-group">
+                                        <span>
+                                            <i class="material-icons">assignment_ind</i>
+                                        </span>
+                                        <input type="text" placeholder="USERNAME" value="@yousefsami">
+                                    </div>
+                                    <div class="form-group">
+                                        <span>
+                                            <i class="material-icons">face</i>
+                                        </span>
+                                        <input type="text" placeholder="NAME" value="Yousef Sami">
+                                    </div>
+                                    <div class="form-group">
+                                        <span>
+                                            <i class="material-icons">public</i>
+                                        </span>
+                                        <input type="text" placeholder="WEB SITE">
+                                    </div>
+                                    <div class="form-group h-80">
+                                        <span>
+                                            <i class="material-icons">info</i>
+                                        </span>
+                                        <textarea placeholder="BIO" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="private">
+                                    <p>
+                                        PRIVATE INFORMATION
+                                    </p>
+                                    <div class="form-group">
+                                        <span>
+                                            <i class="material-icons">local_post_office</i>
+                                        </span>
+                                        <input type="text" placeholder="EMAIL" value="yousef.sami19@gmail.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <span>
+                                            <i class="material-icons">fingerprint</i>
+                                        </span>
+                                        <input type="text" placeholder="PASSWORD">
+                                    </div>
+                                    <div class="form-group">
+                                        <span>
+                                            <i class="material-icons">phone</i>
+                                        </span>
+                                        <input type="text" placeholder="PHONE NUMBER">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- @send message view -->
+    <div class="view-message">
+        <div class="status-bar">
+            <div class="back-arrow">
+                <i class="material-icons">navigate_before</i>
+            </div>
+            <div class="sender-name">Yousef Sami</div>
+        </div>
+        <div class="messages-area" data-viewport="true">
+            <ul class="touch-y">
+                <li class="recive">
+                    <div>
+                        Hi dear welcome
+                        <span>12:08 PM</span>
+                    </div>
+                </li>
+                <li class="sent">
+                    <div>
+                        Hi how are you?
+                        <br/>
+                        what's up?
+                        <span>12:11 PM</span>
+                    </div>
+                </li>
+                <li class="sent">
+                    <div>
+                        Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content
+                        <span>1:11 PM</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="text-media-area">
+            <div class=message-form>
+                <button id="send-message"><i class="material-icons">send</i></button>
+                <input id="message-text" type="text" placeholder="Type Something + Enter">
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="signature" style="width:330px;margin:0 auto;text-align:center;">
+                    <a href="https://codepen.io/yousefsami/" target="_blank">
+                        <svg fill="#eee" width="120" height="100" viewBox="0 0 595.28 841.89" enable-background="new 0 0 595.28 841.89">
+                            <g>
+                                <path d="M133.165,507.429c0.504,0.573,0.928,0.827,0.95,1.112c0.466,6.043,5.137,6.735,9.595,7.253
+                                    c16.6,1.927,31.618-1.682,43.636-13.897c8.28-8.416,11.527-18.623,8.182-30.239c-2.682-9.316-10.274-14.286-18.566-17.154
+                                    c-11.13-3.849-22.657-6.753-34.205-9.139c-18.56-3.835-37.292-6.903-55.123-13.591c-14.859-5.573-27.477-14.123-35.803-28.109
+                                    c-6.422-10.788-8.19-22.616-7.976-34.899c0.547-31.515,14.938-56.913,36.352-78.497c34.017-34.288,75.522-54.583,123.055-62.527
+                                    c16.874-2.82,33.828-3.029,50.478,1.597c12.248,3.403,22.691,9.51,27.35,22.232c3.851,10.514,3.527,21.044-1.342,31.276
+                                    c-5.63,11.833-14.179,21.375-23.743,30.104c-0.533,0.486-1.398,0.608-2.108,0.899c-0.186-0.294-0.371-0.588-0.557-0.882
+                                    c1.833-2.118,3.742-4.175,5.487-6.363c6.57-8.242,12.618-16.841,14.832-27.381c2.991-14.239-3.203-26.132-16.46-32.1
+                                    c-12.274-5.525-25.342-6.15-38.513-6.05c-34.227,0.26-66.112,9.165-95.414,26.723c-27.584,16.528-49.544,38.67-63.946,67.69
+                                    c-6.039,12.169-9.712,24.962-8.839,38.919c1.111,17.745,10.499,29.629,25.255,38.115c13.101,7.535,27.726,10.274,42.257,13.279
+                                    c16.842,3.484,33.785,6.548,50.49,10.595c6.785,1.643,13.376,4.835,19.502,8.3c13.728,7.764,18.12,20.275,16.167,35.371
+                                    c-3.163,24.453-18.927,37.805-40.765,45.465c-8.353,2.93-16.936,5.38-25.993,3.735c-1.813-0.33-3.663-0.939-5.27-1.828
+                                    c-3.457-1.912-7.011-4.374-6.613-8.731C125.962,513.846,128.897,510.086,133.165,507.429z"/>
+                                <path d="M334.315,500.177c1.253-2.301,2.695-4.52,3.727-6.916c5.869-13.625,11.457-27.375,17.539-40.903
+                                    c2.276-5.062,5.065-10.11,8.609-14.336c5.631-6.716,14.911-4.573,17.071,3.91c1.366,5.367,1.68,11.096,1.772,16.674
+                                    c0.234,14.237,0.078,28.481,0.633,43.054c0.61-1.203,1.333-2.362,1.814-3.614c5.451-14.195,10.711-28.466,16.376-42.575
+                                    c1.836-4.573,4.475-8.881,7.169-13.036c2.276-3.51,6.06-3.734,9.759-2.757c3.568,0.942,6.347,3.056,7.16,6.898
+                                    c0.409,1.935,0.482,3.953,0.581,5.94c0.745,14.961,1.512,29.921,2.158,44.886c0.269,6.225,3.091,10.915,7.96,14.56
+                                    c0.389,0.291,0.723,0.659,1.062,1.011c0.072,0.075,0.051,0.239,0.073,0.362c-4.641,4.902-15.39,3.443-18.464-3.124
+                                    c-2.113-4.514-3.37-9.69-3.797-14.674c-0.777-9.068-0.611-18.214-0.921-27.325c-0.166-4.865-0.361-9.739-0.856-14.577
+                                    c-0.144-1.407-1.367-2.704-2.095-4.051c-1.198,0.918-2.97,1.584-3.5,2.794c-3.045,6.955-5.887,14.003-8.626,21.086
+                                    c-4.538,11.735-8.87,23.55-13.47,35.26c-0.989,2.516-2.429,5.033-4.267,6.977c-1.269,1.342-3.693,2.493-5.39,2.251
+                                    c-1.438-0.205-3.338-2.358-3.695-3.949c-0.891-3.981-1.36-8.129-1.398-12.216c-0.148-15.749-0.057-31.501-0.066-47.251
+                                    c-0.001-1.374,0.251-2.874-0.211-4.089c-0.568-1.493-1.511-3.474-2.756-3.905c-1.281-0.444-3.652,0.243-4.6,1.291
+                                    c-1.707,1.886-2.926,4.315-3.967,6.685c-7.527,17.121-14.903,34.31-22.48,51.408c-1.191,2.688-2.833,5.342-4.839,7.471
+                                    c-4.423,4.692-10.264,3.335-11.486-2.949c-1.06-5.447-0.775-11.158-1.059-16.753c-0.06-1.182-0.009-2.369-0.009-4.089
+                                    c-3.65,5.198-6.668,10.023-10.215,14.421c-4.759,5.9-10.541,10.64-17.927,13.008c-10.362,3.322-20.506-0.455-26.229-9.716
+                                    c-0.769-1.244-1.453-2.54-2.065-3.617c-4.55,3.71-8.829,7.476-13.399,10.848c-5.045,3.723-10.941,5.352-17.159,5.788
+                                    c-8.742,0.613-17.089-5.018-20.809-14.233c-5.482-13.578-3.583-26.715,3.036-39.32c8.684-16.538,21.262-28.678,40.029-32.79
+                                    c9.863-2.161,19.674-1.242,28.559,4.163c2.076,1.263,3.95,3.09,5.439,5.025c1.69,2.197,3.073,4.856,0.101,7.249
+                                    c-3.04,2.448-7.498,2.256-9.808-0.321c-1.415-1.579-2.685-3.309-4.229-4.747c-8.22-7.652-19.703-8.905-30.497-2.423
+                                    c-15.971,9.591-24.454,23.903-24.319,42.739c0.073,10.225,6.153,19.001,14.436,21.059c10.101,2.51,18.727-0.571,25.721-8.127
+                                    c0.724-0.782,0.754-2.476,0.654-3.71c-0.785-9.607-1.567-19.232,1.803-28.527c0.954-2.632,2.382-5.307,4.262-7.344
+                                    c3.868-4.189,9.08-2.894,9.994,2.713c0.723,4.436,0.716,9.318-0.38,13.645c-1.543,6.094-4.147,11.97-6.797,17.709
+                                    c-1.16,2.513-1.133,4.282,0.278,6.506c5.203,8.2,18.152,11.001,27.878,5.802c9.371-5.01,15.559-13.14,20.876-22
+                                    c0.763-1.271,0.734-3.134,0.74-4.724c0.054-13.5,0.011-27.001,0.041-40.501c0.013-5.744,0.84-11.922-8.372-11.987
+                                    c-0.116-0.517-0.233-1.034-0.349-1.552c1.177-0.638,2.342-1.301,3.535-1.909c2.442-1.245,4.899-2.461,7.349-3.69
+                                    c4.245-2.13,7.749-1.051,9.122,3.443c1.041,3.405,1.581,7.098,1.58,10.663c-0.007,20.24-0.263,40.48-0.372,60.721
+                                    c-0.011,2.007,0.396,4.016,0.608,6.025C333.395,499.987,333.855,500.082,334.315,500.177z M267.025,489.446
+                                    c3.93-6.608,5.806-13.703,5.736-21.243c-0.013-1.405-1.033-2.8-1.588-4.2c-1.092,1.041-2.641,1.883-3.199,3.158
+                                    C264.805,474.404,265.709,481.918,267.025,489.446z"/>
+                                <path d="M517.628,474.7c-1.645,3.982-3.109,8.051-4.968,11.93c-5.396,11.26-11.674,21.917-23.087,28.184
+                                    c-2.992,1.643-6.451,2.896-9.819,3.301c-9.159,1.099-15.845-2.804-18.35-11.746c-2.129-7.603-3.775-15.678-3.626-23.506
+                                    c0.242-12.66,2.131-25.289,3.328-37.93c0.023-0.247,0.03-0.53,0.153-0.729c1.189-1.94,2.231-5.284,3.648-5.454
+                                    c1.986-0.238,4.578,1.542,6.286,3.13c1.071,0.996,1.619,3.339,1.338,4.883c-2.89,15.837-3.455,31.734-1.782,47.728
+                                    c0.039,0.373,0.038,0.753,0.111,1.118c2.387,12.027,11.408,15.739,21.653,8.934c9.897-6.574,16.082-16.214,21.76-26.276
+                                    c0.771-1.366,1.501-2.756,2.249-4.135C516.891,474.32,517.26,474.51,517.628,474.7z"/>
+                                <path d="M458.566,401.149c0.126-8.496,4.932-13.342,12.581-12.621c0.967,0.091,1.969,0.353,2.847,0.766
+                                    c4.302,2.023,6.401,9.047,4.628,15.267c-1.494,5.238-6.119,8.506-11.162,7.886C461.668,411.736,458.469,407.673,458.566,401.149z"
+                                    />
+                            </g>
+                        </svg>
+                    </a>
+    </div>
+
   </section>
 
   <section id="login" class="page">
@@ -253,7 +860,9 @@
   <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- main js file -->
   <script src="js/main.js"></script>
 </body>
