@@ -2188,4 +2188,35 @@ a.slide_btn {
   transform: translate(-50%, -50%);
 }
 
+/* Settings */
+
+.grid-container {
+	max-width:85%;
+	height: 650px;
+	position: relative;
+	top: 18vh;
+  display: grid;
+  grid-column-gap: 20px;
+	grid-row-gap: 60px;
+  grid-template-columns: auto auto ;
+  background-image: url("../img/set-bgr.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+  padding: 30px;
+}
+
+.grid-item {
+	max-width: 50%;
+   border-radius: 40px;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: rgba(255,255,255,0.66);
+  padding: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+
 
