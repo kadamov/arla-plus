@@ -2160,3 +2160,32 @@ a.slide_btn {
     right: 50px;
   }
 }
+
+/*Arla page */
+.container {
+  position: relative;
+	margin: 30% auto;
+  text-align: center;
+  color: white;
+}
+.container2 {
+  position: relative;
+	margin: 10% auto;
+  text-align: center;
+  color: white;
+}
+.container3 {
+  position: relative;
+	margin: 20% auto;
+  text-align: center;
+  color: white;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
