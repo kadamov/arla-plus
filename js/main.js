@@ -385,7 +385,7 @@ function appendChart(data) {
 
   for (let object of data) {
     cows.push(object.gsx$cows.$t);
-    years.push(object.gsx$cows.$t);
+    years.push(object.gsx$year.$t);
   }
 
   // generate chart
@@ -395,9 +395,17 @@ function appendChart(data) {
     data: {
       datasets: [{
         data: cows,
-        label: 'Number of Cows'
+        label: 'Number of Cows',
+        borderColor: "#F0AA00",
+
+        backgroundColor: "#4bb131",
+        pointBackgroundColor: "white",
+        pointBorderColor: "green",
+        pointHoverBackgroundColor: "green",
+        pointHoverBorderColor: "#F0AA00",
       }],
       labels: years
+
     },
     options:{
       scales:{
