@@ -2278,22 +2278,26 @@ display: none;
 	}
 	.tabbar{ display: none;}
 	
-	
-	
-.main {
-	display: block;
-	
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+	/* ---------- page styling ---------- */
+.page {
+  display: none;
+  /*min heigh is screen heigh minus height of tab and top bar */
+  min-height: calc(100vh - 0px);
+  background: var(--light-grey);
+  animation: fadeIn 0.4s;
+  background-color: red;
+  /* padding equals height of tabbar and topbar-home */
+
 }
-	.main p, h2{
-	color: black
-}
+
+	
+	
+	
+
 	.sidenav {
 		display: block;
   height: 100%;
-  width: 160px;
+  width: 300px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -2314,7 +2318,9 @@ display: none;
 .sidenav a:hover {
   color: #f1f1f1;
 }
-
+.sidenav a.active {
+color: green;
+}
 	
 
   .grid-container {

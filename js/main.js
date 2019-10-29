@@ -52,6 +52,21 @@ function logout() {
 firebase.auth().signOut();
 }
 
+// Listen on authentication state change
+firebase.auth().onAuthStateChanged(function(user) {
+let sidenav = document.querySelector('#sidenav');
+console.log(user);
+if (user) { // if user exists and is authenticated
+setDefaultPage();
+sidenav.classList.remove("hide");
+appendUserData(user);
+} else { // if user is not logged in
+showPage("login");
+sidenav.classList.add("hide");
+ui.start('#firebaseui-auth-container', uiConfig);
+}
+showLoader(false);
+});
 
 
 
@@ -79,6 +94,19 @@ setActiveTab(pageId);
 // sets active tabbar/ menu item
 function setActiveTab(pageId) {
 let pages = document.querySelectorAll(".tabbar a");
+for (let page of pages) {
+if (`#${pageId}` === page.getAttribute("href")) {
+page.classList.add("active");
+} else {
+page.classList.remove("active");
+}
+
+}
+}
+
+// sets active sidenav/ menu item
+function setActiveTab(pageId) {
+let pages = document.querySelectorAll(".sidenav a");
 for (let page of pages) {
 if (`#${pageId}` === page.getAttribute("href")) {
 page.classList.add("active");
