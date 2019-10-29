@@ -279,19 +279,19 @@ $('.slider').each(function() {
   var bulletArray = [];
   var currentIndex = 0;
   var timeout;
-  
+
   function move(newIndex) {
     var animateLeft, slideLeft;
-    
+
     advance();
-    
+
     if ($group.is(':animated') || currentIndex === newIndex) {
       return;
     }
-    
+
     bulletArray[currentIndex].removeClass('active');
     bulletArray[newIndex].addClass('active');
-    
+
     if (newIndex > currentIndex) {
       slideLeft = '100%';
       animateLeft = '-100%';
@@ -299,7 +299,7 @@ $('.slider').each(function() {
       slideLeft = '-100%';
       animateLeft = '100%';
     }
-    
+
     $slides.eq(newIndex).css({
       display: 'block',
       left: slideLeft
@@ -319,7 +319,7 @@ $('.slider').each(function() {
       currentIndex = newIndex;
     });
   }
-  
+
   function advance() {
     clearTimeout(timeout);
     timeout = setTimeout(function() {
@@ -330,7 +330,7 @@ $('.slider').each(function() {
       }
     }, 4000);
   }
-  
+
   $('.next_btn').on('click', function() {
     if (currentIndex < ($slides.length - 1)) {
       move(currentIndex + 1);
@@ -338,7 +338,7 @@ $('.slider').each(function() {
       move(0);
     }
   });
-  
+
   $('.previous_btn').on('click', function() {
     if (currentIndex !== 0) {
       move(currentIndex - 1);
@@ -346,10 +346,10 @@ $('.slider').each(function() {
       move(3);
     }
   });
-  
+
   $.each($slides, function(index) {
     var $button = $('<a class="slide_btn">&bull;</a>');
-    
+
     if (index === currentIndex) {
       $button.addClass('active');
     }
@@ -358,6 +358,74 @@ $('.slider').each(function() {
     }).appendTo('.slide_buttons');
     bulletArray.push($button);
   });
-  
+
   advance();
 });
+
+//add data tab
+let sheetId = "1XLv0wNtKVsBbKHPiGx1PLlbzc3RcxHmEPS6lmTvUwLA";
+let sheetNumber = 1;
+let sheetUrl = "https://spreadsheets.google.com/feeds/list/" + sheetId + "/" + sheetNumber + "/public/full?alt=json";
+console.log(sheetUrl);
+
+fetch(sheetUrl)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(json) {
+    appendChart(json.feed.entry);
+  });
+
+function appendChart(data) {
+  console.log(data);
+
+  // prepare data
+  let cows = [];
+  let years = [];
+
+  for (let object of data) {
+    cows.push(object.gsx$cows.$t);
+    years.push(object.gsx$cows.$t);
+  }
+
+  // generate chart
+  let chart = document.getElementById('chart');
+  let myDoughnutChart = new Chart(chart, {
+    type: 'line',
+    data: {
+      datasets: [{
+        data: cows,
+        label: 'Number of Cows'
+      }],
+      labels: years
+    },
+    options:{
+      scales:{
+        yAxes:[{
+          ticks:{
+            min:45,
+            max: 55
+          }
+        }]
+
+
+      }
+    }
+  });
+}
+var count = $(('#count'));
+$({ Counter: 0 }).animate({ Counter: count.text() }, {
+  duration: 5000,
+  easing: 'linear',
+  step: function () {
+    count.text(Math.ceil(this.Counter)+ "%");
+  }
+});
+
+var s = Snap('#animated');
+var progress = s.select('#progress');
+
+progress.attr({strokeDasharray: '0, 251.2'});
+Snap.animate(0,251.2, function( value ) {
+    progress.attr({ 'stroke-dasharray':value+',251.2'});
+}, 5000);
