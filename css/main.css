@@ -2274,6 +2274,272 @@ display: none;
   }
 }
 
+
+
+/*TABLET MEDIA*/
+@media (max-width: 992px) {
+	
+	.logo-home{
+  width: 13%;
+  padding: 0% 32%;
+}
+
+
+
+.topbar-home {
+  width: 100%;
+
+  color: var(--text-color-light);
+  background-color: green;
+  padding: 1% 0%;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 20px;
+  z-index: 9999;
+}
+
+
+
+#socialdiv{
+margin-top: 200px;
+width: 100%;
+text-transform: uppercase;
+position: fixed;
+}
+#socialdiv i{
+color: green;
+padding-top: 15%;
+font-size: 70px;
+
+
+}
+
+
+.topbar-home h2 {
+  margin: 0;
+  font-weight: 300;
+  background-color: green;
+}
+
+.topbar-home a {
+  text-decoration: none;
+  color: var(--text-color-light);
+  position: absolute;
+  top: 20px;
+
+  font-size: 1.9em;
+}
+
+.topbar-home a.left {
+  left: 20px;
+}
+
+.topbar-home a.right {
+  right: 20px;
+}
+
+
+/* ---------- tabbar styling ---------- */
+.tabbar {
+  background-image: url("../img/korn_top_image.png");
+  background-repeat: no-repeat;
+  background-size:  cover;
+	background-position: center;
+	margin: 10vh auto;
+  position: relative;
+  top: 0%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 800px;
+}
+
+/* Style the links inside the navigation bar */
+.tabbar a {
+  width: 90%;
+  height: 30px;
+	position: relative;
+	top: 13vh;
+  
+  color: green;
+  text-align: center;
+  padding: 21.5px 0px;
+margin-left: 40px;
+margin-top: 15px;
+border-radius: 40px;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  background-color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+}
+
+/* Change the color of links on hover */
+.tabbar a:hover {
+  background-color: green;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.tabbar a.active {
+
+
+}
+
+
+.table-icon, .data-icon, .forum-icon, .tipstricks, .arla-icon, .settings-icon{
+width: 8%;
+position: relative;
+top: -0.6rem;
+left: 0.7rem;
+float: left;
+}
+.profile-icon{
+  width: 5%;
+  position: relative;
+  top: -0.6rem;
+  left: 1.2rem;
+  float: left;
+  }
+
+
+
+
+/* ---------- page styling ---------- */
+.page {
+  display: none;
+  /*min heigh is screen heigh minus height of tab and top bar */
+  min-height: calc(100vh - 110px);
+  background: var(--light-grey);
+  animation: fadeIn 0.4s;
+
+  background-color: white;
+  /* padding equals height of tabbar and topbar-home */
+
+}
+
+	#container {
+    width: 78%;
+    height: 568px;
+    background: #fff;
+    position: absolute;
+    left: 30%;
+    top: 41%;
+    margin-top: -154px;
+    margin-left: -160px;
+    overflow: hidden;
+}
+		/*data*/
+svg{width:10%;}
+
+text{
+  color: white;
+}
+
+.datacont{
+	width: 80%;
+	margin-left: 10%;
+  position: relative;
+  top: 25vh;
+}
+
+	.topbar{
+		top: 16%;
+	}
+	
+	/*Tips & Tricks*/
+
+.slider {
+  margin-left: 7%;
+  width: 90%;
+	
+}
+
+.slide_viewer {
+  height: 85vh;
+  overflow: hidden;
+  position: relative;
+	top: 11vh;
+
+}
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  max-width: 100%;
+
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  max-width: 100%;
+}
+	.slide:nth-of-type(1) {
+		width: 100%;
+ background-image: url("../img/tricks.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.slide:nth-of-type(2) {
+  background-image: url("../img/tricks1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.slide:nth-of-type(3) {
+   background-image: url("../img/tricks2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.slide:nth-of-type(4) {
+   background-image: url("../img/tricks1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*PC media*/
 @media (min-width: 992px) {
 	.topbar-home{
@@ -3321,5 +3587,5 @@ text{
     transform: translate(85px, 0%);
   }
 }
-
+	
 
