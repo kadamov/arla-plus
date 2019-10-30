@@ -128,6 +128,8 @@ showPage(page);
 
 setDefaultPage();
 
+
+
 function showLoader(show) {
 let loader = document.querySelector('#loader');
 if (show) {
